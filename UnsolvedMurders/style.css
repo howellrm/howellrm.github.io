@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Comfortaa|Londrina+Solid');
+
+
+html, body {
+  margin:0px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #2d2f33;
+}
+
+.landing { 
+  height: 100%;
+  width:100%;
+  margin: auto;
+  background: url(https://images.pexels.com/photos/8827/road-man-lights-legs.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat 50% 50%;
+  display: table;
+  top: 0;
+  height: 900px;
+}
+
+.overview { 
+    height: 100%;
+    width:100%;
+    margin: auto;
+    background-color: #1B1923;
+    display: table;
+    top: 0;
+    height: 650px;
+  }
+
+.overview-head {
+    font-size: 500%;
+    font-family: 'Comfortaa', sans-serif;
+    text-align: center;
+    color: #C40018;
+}
+
+.overview-p {
+    font-size: 120%;
+    font-family: 'Comfortaa', sans-serif;
+    color: #FFFFFF;
+}
+
+.container {
+    top: 20px;
+    left: 15px;
+    right: 15px;
+    padding: 60px;
+}
+
+.deco { 
+  height: 100%;
+  width:100%;
+  margin: auto;
+  background: url(https://images.pexels.com/photos/750241/pexels-photo-750241.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat 30% 40%;
+  top: 1px solid;
+  height: 350px;
+}
+
+#CrimeData {
+    height: 100%;
+    width:100%;
+    margin: auto;
+    background-color: #EBEBEB;
+    display: table;
+    top: 0;
+    height: 800px;
+  }
+
+.CrimeData {
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 200%;
+}
+
+#CrimesByState {
+    height: 100%;
+    width:100%;
+    margin: auto;
+    background-color: #EBEBEB;
+    display: table;
+    top: 0;
+    height: 800px;
+  }
+
+
+.bystate {
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 200%;
+    color: #EBEBEB;
+}
+
+#contact {
+    width:100%;
+    margin: auto;
+    background-color: #212529; 
+    display: table;
+    top: 0;
+    height: 350px;
+    /* background: url(https://images.pexels.com/photos/983828/pexels-photo-983828.jpeg?cs=srgb&dl=colors-design-flatlay-983828.jpg&fm=jpg) no-repeat;
+    background-size: 75%; */
+}
+
+.contact {
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 200%;
+    color: #EBEBEB;
+}
+
+.wel-text {
+    opacity: 0.75;
+    background-color: black;  
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    padding: 25px;
+}
+
+.h1-title {
+    font-family: "Able", sans-serif;
+    font-size: 400%;  
+    color: #C40018;
+    z-index: 3;
+    line-height: 50px;
+    right: 20px;
+}
+
+.h2-title{
+    font-family: 'Comfortaa', cursive;
+    font-size: 150%;  
+    color: #C40018;
+    z-index: 3;
+    line-height: 22px;
+    right: 20px;
+}
+
+.h3-title {
+    font-family: 'Comfortaa', cursive;
+    font-size: 150%;  
+    color: #fff;
+    z-index: 3;
+    line-height: 22px;
+    right: 20px;
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+
+.h4-pdesc {
+    font-family: "Able", sans-serif;
+    font-size: 250%;  
+    color: #C40018;
+    z-index: 4;
+    line-height: 50px;
+    right: 20px;
+    padding
+}
+
+.vert {
+	font-family: 'Comfortaa', cursive;
+    font-size: 20px;  
+    color: #fff;
+    transform: rotate(-90deg);
+	position: relative;
+    float: left;
+}
+
+/* To the top button */
+#scroll-btn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    size: 450%;
+    background-color: transparent;
+    color: #C40018;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#scroll-btn:hover {
+    background-color: #C40018;
+    color: #fff;
+}
+
+
+/* Navigation */
+nav {
+    width: 100%;
+    height: 50px;
+    background: rgba(255,255,255,.1);
+    border-top: 1px solid rgba(255,255,255,.2);
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    position:fixed;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    margin:0;
+    padding:0 100px;
+    float: right;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+
+nav ul li a {
+    display:block;
+    color: #fff;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 50px;
+
+}
+
+nav ul li a:hover{
+    color: #E00000;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    background-color:#E00000;
+}
+
+
+@media (min-width:992px){
+    #mainNav{
+        border-color:transparent;
+        background-color:transparent
+    }
+    #mainNav .navbar-brand{
+        color:rgba(255,255,255,.7)
+    }
+    #mainNav .navbar-brand:focus,#mainNav .navbar-brand:hover{
+        color:#fff
+    }
+    #mainNav .navbar-nav>li.nav-item>a.nav-link{
+        padding:.5rem 1rem
+    }
+    #mainNav .navbar-nav>li.nav-item>a.nav-link,#mainNav .navbar-nav>li.nav-item>a.nav-link:focus{
+        color:rgba(255,255,255,.7)
+    }
+    #mainNav .navbar-nav>li.nav-item>a.nav-link:focus:hover,#mainNav .navbar-nav>li.nav-item>a.nav-link:hover{
+        color:#C40018
+    }
+    #mainNav.navbar-shrink{
+        border-bottom:1px solid rgba(33,37,41,.1);
+        background-color:#fff
+    }
+    #mainNav.navbar-shrink .navbar-brand{
+        color:#f05f40
+    }
+    #mainNav.navbar-shrink .navbar-brand:focus,#mainNav.navbar-shrink .navbar-brand:hover{
+        color:#f05f40
+    }
+    #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link,#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus{
+        color:#212529
+    }
+    #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus:hover,#mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:hover{
+        color:#f05f40
+    }
+}
+
+@media screen and (max-width: 768px) {
+   .content h1{
+       font-size: 250%;
+    }
+    .btn{
+        font-size: 110%;
+        padding: 7px 15px;
+    } 
+    .p{
+        font-size: 100%;
+        line-height: 160%;
+    }
+}
