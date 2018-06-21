@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Comfortaa|Londrina+Solid');
+
+
+  .state{
+      fill: yellow;
+      stroke: black;
+      stroke-width: 1;
+  }
+  .state:hover{
+      fill-opacity:0.5;
+      
+  }
+  #tooltip {  
+      position: absolute;          
+      text-align: center;
+      padding: 20px;            
+      margin: 10px;
+      font: 12px 'Comfortaa', sans-serif;        
+      background: lightsteelblue;  
+      border: 1px;      
+      border-radius: 2px;          
+      pointer-events: none;        
+  }
+  #tooltip h4{
+      margin:0;
+      font-size:14px;
+  }
+  #tooltip{
+      background:rgba(0,0,0,0.9);
+      border:1px solid grey;
+      border-radius:5px;
+      font-size:12px;
+      width:150px;
+      padding:4px;
+      color:white;
+      opacity:0;
+  }
+  #tooltip table{
+      table-layout:fixed;
+  }
+  #tooltip tr td{
+      padding:0;
+      margin:0;
+  }
+  #tooltip tr td:nth-child(1){
+      width:150px;
+  }
+  #tooltip tr td:nth-child(2){
+      text-align:center;
+  }
+  #box{
+      
+      background:blue;
+      border: solid 1px black;
+      background-color: #f9f9f9;
+      float:right;
+      padding: 50px;
+      margin: 40px 100px 40px 40px;
+      min-width:300px;
+      min-height:500px;
+      color: #C40018;
+      /* font-weight:bold; */
+      font-family: 'Comfortaa', sans-serif;
+  }
+
+.arc text {
+font: 10px 'Comfortaa', sans-serif;
+text-anchor: middle;
+}
+
+.arc path {
+stroke: #fff;
+}

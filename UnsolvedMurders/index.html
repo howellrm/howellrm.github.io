@@ -8,20 +8,23 @@
   <!-- Makes site responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+<!-- <link rel="stylesheet" href="./web-fonts-with-css"> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <!-- <link rel="stylesheet" href="style2.css"> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 <!-- back to top button -->
   <!-- When the user scrolls down 20px from the top of the document, show the button -->
-  <script>window.onscroll = function() {scrollFunction()};
+  <script>
+  window.onscroll = function() {scrollFunction()};
 
   function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -33,28 +36,52 @@
 
   // When the user clicks on the button, scroll to the top of the document
   function topFunction() {
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    $('html,body').animate({ scrollTop: 0 }, 'slow');
+      //document.body.scrollTop = 0; // For Safari
+      //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
-  </script>
+  
 
-  <!-- Stylesheet -->
+  //   $(window).scroll(function(){
+  //     if ($(document).scrollTop() > 50) {
+  //       $('nav').addClass('scrolled');
+  //     }
+  //     else {
+  //       $('nav').removeClass('scrolled');
+  //     }
+  // });  
+
+  $(window).scroll(function(){
+    var navbar = document.getElementsByTagName('nav')
+       if ($(document).scrollTop() > 50) {
+         navbar.classList.add('scrolled');
+       }
+       else {
+         navbar.classList.remove('scrolled');
+       }
+   });
+</script>
+
+
+ <!-- Stylesheet -->
+  <link href="./mapstyle.css" rel="stylesheet">
   <link href="./style.css" rel="stylesheet">
-  <link href="./script.js" rel="stylesheet">
-  <script src="./prefix.js"></script>
+
   
   <!-- Title -->
   <title>Unsolved Crimes</title>
 </head>
+
 
 <body>
   <!-- Creates the Navigation Bar with logo, links, dropdown option, and search bar -->
   <nav class="nav-bar">
     <ul>
       <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#ProjectDescription">Project Overview</a></li>
+      <li><a href="#ProjectDescription">Project Description</a></li>
       <li><a href="#CrimesByState">By State</a></li>
       <li><a href="#CrimeData">National</a></li>
+      <li><a href="#ProjectReq">Project Requirements</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -76,36 +103,37 @@
     <!-- <div class="container"> -->
       <div class="overview">
         <div class="container">  
-          <h4 class="h4-pdesc">Project Requirements</h4>
-          <p class="overview-p"> For this second project, your task will be to "tell a story" through data visualizations. Unlike the first project, 
-          where you focused on using the "Analytics Paradigm" to explore relationships in "report form", this project should be more focused on 
-          providing users an interactive means to explore data themselves. Just as with the first project, you will be asked to conduct a 
-          10 minute presentation that lays out your theme, coding approach, data munging techniques, and final visualization. You may choose a 
-          project of any theme, but we encourage you to think broadly. The universe is wide and expansive. Don't limit yourself to what you know. 
-          You will have roughly two weeks to complete this project. You will present your final work on Saturday (March 03, 2018). You will have 
-          ample time in class to work with your group (but expect to put in some long nights in the days ahead).
+          <h4 class="h4-pdesc">The Purpose</h4>
+          <p class="overview-p"> Every year, at least 5,000 killers get away with murder. The rate at which police clear homicides 
+            through arrest has declined over the years until, today, about a third go unsolved. As a result, more than 229,000 
+            Americans have perished in unsolved homicides committed since 1980 —  more than the combined death toll of all U.S. 
+            military actions since World War II. The official national statistics on murder are actually estimates and projections 
+            based upon incomplete reports by police departments that voluntarily choose (or refuse) to participate in federal 
+            crime reporting programs. This project will spotlight those communities that fail to report important information 
+            to the FBI’s Uniform Crime Report and Supplementary Homicide Report — two important databases that can be used to help 
+            account for unsolved homicides.
           </p>
-          <h4 class="h4-pdesc">Specific Requirements</h4>
+          <h4 class="h4-pdesc">The Origins</h4>
           <p class="overview-p">
-          The project hs several specific requirements. We have outlined them below. 
-
-          <ol class="overview-p">
-          <li>Your visualization must include a Python Flask powered RESTful API, HTML/CSS, JavaScript, and at least one database (MySQL, MongoDB, SQLite, etc.)</li>
-          <li>Your project should fall into one of the below four tracks: 
-            <ul> 
-              <li>A custom "creative" D3.js project (i.e. non-standard graph or chart)</li>
-              <li>A combination of Web Scraping and Leaflet or Plotly</li>
-              <li>A dashboard page with multiple charts all updating from the same data</li>
-              <li>A "thick" server that performs multiple manipulations on data in a database prior to visualization (must be approved)</li>
-            </ul>
-          <li>Your project should include at least one JS library that we did not cover.</li>
-          <li>Your project must be powered by a dataset with at least 100 records.</li>
-          <li>Your project must include some level of user-driven interaction (e.g. menus, dropdowns, textboxes, etc.)</li>
-          <li>Your final visualization should ideally include at least three views</li>
-          </ol>
+              This website gives the public easy-to-use access to a dataset maintained by the Federal Bureau of 
+              Investigation: the Uniform Crime Report from 1965 to the present. This site uses the FBI database as found on
+              the Murder Accountability Project website. The Murder Accountability Project, using the Freedom of Information Act, 
+              obtained data on more than 27,000 homicides that were not reported to the Justice Department, making this the 
+              most complete data on U.S. homicides available anywhere. The Murder Accountability Project is an outgrowth of a 
+              2010 national reporting project conducted by the newspapers and television stations owned by the E.W. Scripps Co. 
+              The computer algorithm that can spot serial killings within FBI computer files was developed as part of that project.
+          </p>
+          <h4 class="h4-pdesc">The Data</h4>
+          <p class="overview-p">
+              Data used in the creation of this site was assembled in SPSS format and will run with the open source program PSPP 
+              available at no cost from Gnu Software. These files are also available in Comma Separated Values format (CSV) which 
+              will load into any statistical software. You can download the CSV file by clicking 
+              <a href="https://www.dropbox.com/s/zs88zakc03zjxtr/UCR65_16.csv.zip?dl=1"  class="link"><b>here</b></a>.
           </p>
             <a class="btn btn-light btn-xl js-scroll-trigger" href="#services"></a>
+          <p class="overview-p">Visit the <a href="http://www.murderdata.org/" class="link">Murder Accountability Project</a> for more information.</p>
       </div>
+
     </div>
   </section>
 
@@ -117,16 +145,15 @@
   </section>
 
     <section id="CrimesByState">
-    <div class="container">
       <div class="bystate">
-        <div class="row">
-          <div class="col-lg-12 text-center">
+          <br><br>
             <h2 class="h2-title">Crimes By State</h2>
             <hr class="my-4">
-          </div>
-        </div>
+              <div id="tooltip"></div><!-- div to hold tooltip. -->
+               <svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->    
+              <div id="box"></div>
+              
       </div>
-    </div>
   </section>
 
   <section id="CrimeData">
@@ -183,23 +210,107 @@
   
   </section>
 
-  <section id="contact">
-    <div class="container">
+  <!-- <section id="contact">
+    <div style=
+    <!-- <div class="container">
       <div class="contact">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Contact the Project</h2>
-            <hr class="my-4">
-            <p class="vert">Team Memebers:</p>
-          </div>
+        <div class="row"> -->
+            <!-- <h2 class="section-heading">Contact the Project</h2>
+            <hr class="my-4"> -->
+            <!-- <h4>Team Memebers:</h4>
+            <div></div> -->
+        
+        <!-- </div>
+      </div>
+    </div> 
+  </section> -->
+
+  <section class="main-pg" id="ProjectReq">
+      <!-- <div class="container"> -->
+        <div class="overview">
+          <div class="container">  
+            <h4 class="h4-pdesc">Project Requirements</h4>
+            <p class="overview-p"> For this second project, your task will be to "tell a story" through data visualizations. Unlike the first project, 
+            where you focused on using the "Analytics Paradigm" to explore relationships in "report form", this project should be more focused on 
+            providing users an interactive means to explore data themselves. Just as with the first project, you will be asked to conduct a 
+            10 minute presentation that lays out your theme, coding approach, data munging techniques, and final visualization. You may choose a 
+            project of any theme, but we encourage you to think broadly. The universe is wide and expansive. Don't limit yourself to what you know. 
+            You will have roughly two weeks to complete this project. You will present your final work on Saturday (March 03, 2018). You will have 
+            ample time in class to work with your group (but expect to put in some long nights in the days ahead).
+            </p>
+            <h4 class="h4-pdesc">Specific Requirements</h4>
+            <p class="overview-p">
+            The project hs several specific requirements. We have outlined them below. 
+  
+            <ol class="overview-p">
+            <li>Your visualization must include a Python Flask powered RESTful API, HTML/CSS, JavaScript, and at least one database (MySQL, MongoDB, SQLite, etc.)</li>
+            <li>Your project should fall into one of the below four tracks: 
+              <ul> 
+                <li>A custom "creative" D3.js project (i.e. non-standard graph or chart)</li>
+                <li>A combination of Web Scraping and Leaflet or Plotly</li>
+                <li>A dashboard page with multiple charts all updating from the same data</li>
+                <li>A "thick" server that performs multiple manipulations on data in a database prior to visualization (must be approved)</li>
+              </ul>
+            <li>Your project should include at least one JS library that we did not cover.</li>
+            <li>Your project must be powered by a dataset with at least 100 records.</li>
+            <li>Your project must include some level of user-driven interaction (e.g. menus, dropdowns, textboxes, etc.)</li>
+            <li>Your final visualization should ideally include at least three views</li>
+            </ol>
+            </p>
+              <a class="btn btn-light btn-xl js-scroll-trigger" href="#services"></a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-<button onclick="topFunction()" id="scroll-btn" title="Go to top"><span class="glyphicon glyphicon-circle-arrow-up"></span></button>
 
+  <section id="team">
+    <div class="team">
+      <br>
+      <h2 class="h2-title">The Team</h2>
+      <br>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-2">
+          <img src="./images/Screen Shot 2018-06-21 at 8.55.36 AM.png" class="headshots" alt-text="Kettyl Amoakon"></a>
+          <p>Kettyl Amoakon</p>
+        </div>
+        <div class="col-md-2">
+          <img src="./images/Screen Shot 2018-06-21 at 8.55.25 AM.png" class="headshots" alt-text="Benjamin Fisher"></a>
+          <p>Benjamin Fisher</p>
+        </div>
+        <div class="col-md-2">
+          <img src="./images/IMG_5084-1.jpg" class="headshots" alt-text="Randi Howell"></a>
+          <p>Randi Howell</p>
+        </div>
+        <div class="col-md-2">
+          <img src="./images/Screen Shot 2018-06-21 at 8.55.11 AM.png" class="headshots" alt-text="Zach King"></a>
+          <p>Zach King</p>
+        </div>
+        <div class="col-md-2" id="headshots">
+          <img src="./images/Screen Shot 2018-06-21 at 8.55.01 AM.png" class="headshots" alt-text="Deanna Ryder"></a>
+          <p>Deanna Ryder</p>
+        </div>
+
+    <section id="contact">
+        <div class="contact">
+            <br>
+            <h2 class="h4-title">Connect With Us</h4>  
+            <!-- <span class="glyphicon glyphicon-envelope"> -->
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square" id="icons"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter" id="icons"></i></a>
+            <a href="https://www.linkedin.com"  target="_blank"><i class="fab fa-linkedin-in" id="icons"></i></a>
+            <a href="mailto:rhowel14@uncc.edu@uncc.edu" target="_blank"><i class="fas fa-envelope" id="icons"></i></a>
+          </div>
+          <br><br>
+    </section>
+
+  <!-- Scroll button -->
+  <button onclick="topFunction()" id="scroll-btn" title="Go to top"><span class="glyphicon glyphicon-circle-arrow-up"></span></button>
+
+  <!-- javascripts -->
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="./uStates.js"></script>
+  <script src="./map.js"></script>
 
 </body>
-
 </html>

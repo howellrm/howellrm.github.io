@@ -65,7 +65,7 @@ html, body {
     background-color: #EBEBEB;
     display: table;
     top: 0;
-    height: 800px;
+    height: 800px; 
   }
 
 .CrimeData {
@@ -92,13 +92,29 @@ html, body {
     color: #EBEBEB;
 }
 
-#contact {
+#team {
     width:100%;
     margin: auto;
-    background-color: #212529; 
+    background-color: #1B1923; 
     display: table;
     top: 0;
     height: 350px;
+}
+
+.team {
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 200%;
+    color: #EBEBEB;
+}
+
+#contact {
+    width:100%;
+    margin: auto;
+    background-color: #1B1923; 
+    display: table;
+    top: 0;
+    height: 200px;
     /* background: url(https://images.pexels.com/photos/983828/pexels-photo-983828.jpeg?cs=srgb&dl=colors-design-flatlay-983828.jpg&fm=jpg) no-repeat;
     background-size: 75%; */
 }
@@ -107,6 +123,13 @@ html, body {
     text-align: center;
     font-family: 'Comfortaa', sans-serif;
     font-size: 200%;
+    color: #EBEBEB;
+}
+
+.contact-list{
+    text-align: left;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 25px;
     color: #EBEBEB;
 }
 
@@ -158,14 +181,49 @@ html, body {
     padding
 }
 
-.vert {
+.contact-list {
 	font-family: 'Comfortaa', cursive;
     font-size: 20px;  
     color: #fff;
-    transform: rotate(-90deg);
-	position: relative;
-    float: left;
+    position: relative;
+    left: 150px;
+    right: 150px;
+    list-style-type: none;
 }
+
+#icons {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#icons:hover {
+    color: #C40018;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link{
+    color: #C40018;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.headshots {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    height: 125px;
+    width: 120px;
+}
+
+
+
 
 /* To the top button */
 #scroll-btn {
@@ -191,8 +249,9 @@ html, body {
 }
 
 
+
 /* Navigation */
-nav {
+.nav-bar {
     width: 100%;
     height: 50px;
     background: rgba(255,255,255,.1);
@@ -234,6 +293,10 @@ nav ul li a.active {
     background-color:#E00000;
 }
 
+.nav.scrolled{
+    background-color: #2d2f33;
+    transition: background-color 200ms linear;
+}
 
 @media (min-width:992px){
     #mainNav{
