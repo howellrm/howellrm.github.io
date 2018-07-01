@@ -1,0 +1,254 @@
+/* ====================================================
+	TOC
+	
+	1. PRIMARY STYLES
+	2. COMMONS FOR PAGE DESIGN
+	3. INTRO SECTION
+	4. ABOUT SECTION
+        -ACCORDIANS/TechSkills
+	5. EXPERIENCE SECTION
+	6. PROJECTS SECTION
+    7. EDUCATION SECTION
+	8. FOOTER
+==================================================== */
+
+
+/* ---------------------------------
+1. PRIMARY STYLES
+--------------------------------- */
+
+html{ font-size: 100%; height: 100%; overflow-x: hidden; margin: 0px;  padding: 0px; touch-action: manipulation; }
+
+
+body{ font-size: 16px; font-family: 'Poppins', serif; width: 100%; height: 100%; margin: 0; font-weight: 400;
+	-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; word-wrap: break-word; 
+	color: #333; }
+
+h1, h2, h3, h4, h5, h6, p, a, ul, span, li, img, inpot, button{ margin: 0; padding: 0; }
+
+h1,h2,h3,h4,h5,h6{ line-height: 1.5; font-weight: inherit; }
+
+h1,h2,h3{ font-family: 'Poppins', cursive; }
+
+p{ line-height: 1.6; font-size: 1.05em; font-weight: 400; color: fff; }
+
+h1{ font-size: 4em; line-height: 1; }
+h2{ font-size: 2.2em; line-height: 1.1; }
+h3{ font-size: 1.8em; }
+h4{ font-size: 1.3em; }
+h5{ font-size: 1em; }
+h6{ font-size: .9em; letter-spacing: 1px; }
+
+a, button{ display: inline-block; text-decoration: none; color: inherit; line-height: 1; 
+	-webkit-transition: all .25s ease-in-out; transition: all .25s ease-in-out; }
+
+a:focus, a:active, a:hover
+button:focus, button:active, button:hover,
+a b.light-color:hover{ text-decoration: none; color: #9ca03d;}
+
+b{ font-weight: 600; }
+
+img{ width: 100%; }
+
+li{ list-style: none; display: inline-block; }
+
+span{ display: inline-block; }
+
+button{ outline: 0; border: 0; background: none; cursor: pointer; }
+
+.icon{ font-size: 1.1em; display: inline-block; line-height: inherit; }
+
+[class^="icon-"]:before, [class*=" icon-"]:before{ line-height: inherit; }
+
+b.max-bold{ font-weight: 700; }
+
+
+
+/* ---------------------------------
+2. COMMONS FOR PAGE DESIGN
+--------------------------------- */
+
+.section{ padding: 100px 0 50px; }
+
+.section .heading{ margin-bottom: 60px; }
+
+.section .heading:before{ content:''; height: 10px; width: 50px; border-radius: 5px;
+	margin-bottom: 20px; display: block; background: #ba5e3c; }
+	
+.margin-t-10{ margin-top: 10px; }
+
+.margin-b-30{ margin-bottom: 30px; }
+.margin-b-50{ margin-bottom: 50px; }
+
+.margin-tb-30{ margin-top: 30px; margin-bottom: 30px; }
+
+.font-yellow{ color: #ba5e3c; }
+
+.font-semi-white{ color: #ddd; }
+
+.font-lite-black{ color: #999; }
+
+
+/* ---------------------------------
+3. INTRO SECTION
+--------------------------------- */
+
+.intro-section{ 
+	padding-top: 200px; 
+	position: relative; 
+	background-size: cover; 
+	z-index: 1;
+	/* background-image: url(../../images/arm-break-business-257897.jpg); */
+	background-image: url(../../images/blurred-background-close-up-coffee-cup-908284.jpg);
+	background-position-y: 110%;
+	background-size: 130%; 
+}
+
+.intro-section:before{ content:''; z-index: -1; position: absolute; top: 0; bottom: 0; left: 0; 
+	right: 0; background: rgba(0,0,0, .2); }
+	
+.intro-section:after{ content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+	height: 150px; z-index: -1; background: #fff; }
+
+.intro{ padding: 0 20px; margin-top: 100px; text-align: center; background: #fff; }
+
+.intro .profile-img{ height: 200px; width: 200px; border-radius: 100px; margin: 0 auto; 
+	overflow: hidden; position: relative; top: -100px; margin-bottom: -70px;  }
+
+.intro .information > li{ display: block; margin: 5px 0; }
+
+.intro .social-icons > li > a{ height: 35px; line-height: 35px; width: 35px; border-radius: 20px; 
+	overflow: hidden; z-index: 1; position: relative; margin: 0 5px 5px; background: #008386; color: #fff; }
+
+.intro .social-icons > li > a:after{ content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+	top: 0; z-index: -1; border-radius: 20px; background: #ba5e3c; 
+	-webkit-transition: all .2s ease; transition: all .2s ease;
+	-webkit-transform: scale(0); transform: scale(0); }
+
+.intro .social-icons > li > a:hover:after{ -webkit-transform: scale(1); transform: scale(1); }
+
+/* ---------------------------------
+4. ABOUT SECTION
+--------------------------------- */
+
+/* ACCORDIANS */
+
+.panel-area .panel-title{ padding: 10px 20px; cursor: pointer; position: relative; color: #fff;
+	border-radius: 3px; background: #5b9290; color: #fff; }
+
+.panel-area .panel-desc{ max-height: 0; overflow: hidden; opacity: 0;
+	-webkit-transition: all .05s, opacity .25s .1s, -webkit-transform .1s; 
+	transition: all .05s, opacity .25s .1s, transform .1s; 
+	-webkit-transform: scaleY(0); transform: scaleY(0); 
+	-webkit-transform-origin: top; transform-origin: top; }
+
+.panel-area .panel-title .icon{ float: right; font-size: .7em; margin-top: 5px; }
+
+.panel-area .panel-title.active{ background: #BC5F3B; }
+
+.panel-area .panel-title.active + .panel-desc{ opacity: 1; padding: 20px 20px 0; max-height: 300px; 
+	-webkit-transform: scaleY(1); transform: scaleY(1); }
+
+.panel-area .panel-title .icon.plus,
+.panel-area .panel-title.active .icon.minus{ display: block; }
+
+.panel-area .panel-title .icon.minus,
+.panel-area .panel-title.active .icon.plus{ display: none; }
+
+/* ---------------------------------
+7. EXPERIENCE SECTION
+--------------------------------- */
+
+.experience-section{ background: #162d40; color: #fff; }
+
+.experience .list > li{ display: block; position: relative; margin-bottom: 10px; padding-left: 20px; }
+
+.experience .list > li:before{ content: ''; position: absolute; top: 50%; left: 0; height: 10px; 
+	width: 10px; margin-top: -5px; display: block; border-radius: 10px; border: 2px solid #fff; }
+
+
+/* ---------------------------------
+7. PROJECT SECTION
+--------------------------------- */
+
+.projects-wrapper{ position: relative; overflow: hidden; text-align: center; }
+
+.projects-wrapper:after{ content:''; position: absolute; top: 8px; bottom: 0; left: 50%;
+	margin-left: -1px; width: 2px; background: #ba5e3c; }
+
+.projects-wrapper .projects{ width: 50%; clear: both; position: relative; margin-top: -30px; }
+
+.projects-wrapper .projects:first-child{ margin-top: 0; } 
+
+.projects-wrapper .projects.left{ float: left; padding-right: 50px; text-align: right; }
+
+.projects-wrapper .projects.right{ float: right; padding-left: 50px; text-align: left; }
+
+.projects-wrapper .projects:after{ content:''; position: absolute; top: 8px; width: 16px; 
+	height: 16px; border-radius: 10px; z-index: 1;
+	box-shadow: 0 0 0 8px rgba(91,146,144, .4); background: #5b9290;}
+	
+.projects-wrapper .projects.left:after{ right: -8px; }
+
+.projects-wrapper .projects.right:after{ left: -8px; }
+
+
+
+/* ---------------------------------
+8. EDUCATION SECTION
+--------------------------------- */
+.education-section { background: #162d40; color:#fff;}
+
+.education-wrapper{ position: relative; }
+/* 
+.education-wrapper:after{ content:''; position: absolute; top: 8px; bottom: 0; left: -51px;
+	width: 2px; background: #ccc; } */
+
+.education-wrapper .education{ position: relative; }
+
+/* .education-wrapper .education:after{ content:''; position: absolute; top: 8px; left: -58px; width: 16px; 
+	height: 16px; border-radius: 10px; z-index: 1;
+	box-shadow: 0 0 0 8px  rgba(91,146,144, .4); background: #5b9290; }
+	 */
+
+
+/* ---------------------------------  
+10. FOOTER
+--------------------------------- */
+#deco { 
+    /* opacity: 0.25; */
+    margin: auto;
+    background: url(https://images.pexels.com/photos/572056/pexels-photo-572056.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat 50% 20%;
+    top: 1px solid;
+    height: 950px;
+    /* border-bottom: #fff solid 2px; */
+    /* background-position-y: 90%; */
+    /*-webkit-filter: grayscale(50%);  Safari 6.0 - 9.0 
+    filter: grayscale(100%);*/
+  }
+
+footer {
+	background-color: #162d40;
+	width: 100%; 
+	height: 150px; 
+	margin: 0;
+	opacity: 50%;
+}
+.foot {
+	color: white;
+	font-size: 20px; 
+	font-family: 'Poppins', serif; 
+	text-align: center;
+	text-decoration: none;
+}
+
+.social-icons2 > li > a{ height: 35px; line-height: 35px; width: 35px; border-radius: 20px; 
+overflow: hidden; z-index: 1; position: relative; margin: 0 5px 5px; background: #162d40; color: #ddd; }
+
+.social-icons2 > li > a:after{ content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+top: 0; z-index: -1; border-radius: 20px; background: #9ca03d; 
+-webkit-transition: all .2s ease; transition: all .2s ease;
+-webkit-transform: scale(0); transform: scale(0); }
+
+.social-icons2 > li > a:hover:after{ -webkit-transform: scale(1); transform: scale(1); }
+

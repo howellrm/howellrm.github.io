@@ -1,0 +1,206 @@
+
+/* @import url('https://fonts.googleapis.com/css?family=Abel|Amatic+SC|Comfortaa|Londrina+Solid'); */
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+
+html, body {
+  background-color: #008386;
+}
+div {
+  font-size: 0;
+}
+
+a {
+  font-size: 16px; 
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(50% - 4px);
+  margin-right: 8px;
+}
+
+a:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+header {
+  background-color: #008386;
+  text-align: center;
+  padding: 5px;
+  font-family: 'Abel', sans-serif;
+  font-size: 200%;
+  color: #f2f2f2;
+  height: 150px;
+}
+
+#otherprojects {
+  height: auto;
+  width:auto;
+  margin: auto;
+  background-color: #EBEBEB;
+  display: table;
+  top: 0;
+  height: 800px; 
+}
+
+.otherprojects {
+  text-align: center;
+  font-family: 'Abel', serif;
+  font-size: 200%;
+}
+
+h4 {
+  font-family: "Abel", sans-serif;
+  font-size: 250%;  
+  color: #008386;
+  line-height: 50px;
+}
+
+#words {
+  background-color: #EBEBEB;
+  text-align: center;
+  padding: 5px;
+  font-family: 'Abel', sans-serif;
+  font-size: 200%;
+  color: #008386;
+  height: 150px;
+}
+
+#otherprojects {
+
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #1B1923;
+}
+
+/* Modal Content */
+.modal-content {
+  position: center;
+  background-color: #EBEBEB;
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* The Close Button */
+.close {
+  color: #008386;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #EBEBEB;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: center;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #008386;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color:#008386;
+  color: #EBEBEB;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: #1B1923;
+  padding: 2px 16px;
+  color: #EBEBEB;
+}
+
+img.demo {
+  opacity: 0.6;
+  size: 50px 50px;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+  size: 50px 50px;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+  size: 25%;
+  padding: 15px;
+
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  size: 50px 50px;
+  padding: 15px;
+}
+
+
+@media screen and (min-width: 50em) {
+  a {
+    width: calc(25% - 6px);
+  }
+
+  a:nth-of-type(2n) {
+    margin-right: 8px;
+  }
+
+  a:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}

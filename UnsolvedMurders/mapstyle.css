@@ -56,11 +56,12 @@
       float:right;
       padding: 50px;
       margin: 40px 100px 40px 40px;
-      min-width:300px;
-      min-height:500px;
+      min-width:150px;
+      min-height:300px;
       color: #C40018;
       /* font-weight:bold; */
       font-family: 'Comfortaa', sans-serif;
+      font-size: 15px;
   }
 
 .arc text {

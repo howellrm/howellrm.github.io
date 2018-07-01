@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="chrome">
+    <title>Week 12 Project</title>
+    
+    <!-- Scripts - for Dropdown -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">  
+    <link rel=”stylesheet” href="font-awesome/css/font-awesome.css">
+</head>
+<body>
+  <!-- Creates the Navigation Bar with logo, links, dropdown option, and search bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="./home.html">Latitude - Week 12 Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./home.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./rawdata.html">Raw Data</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link" href="./jupyternotebook.html">Jupyter Notebook</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href=""./rawdata.html id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plots
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./cloudiness.html">Cloudiness</a>
+                <a class="dropdown-item" href="./humidity.html">Humidity</a>
+                <a class="dropdown-item" href="./temperature.html">Temperature</a>
+                <a class="dropdown-item" href="./windspeed.html">Wind Speed</a>
+                <!-- <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a> -->
+              </div>
+              <li class="nav-item">
+                  <a class="nav-link" href="./comparisons.html">Comparisons</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./projectdescription.html">Project Description</a>
+              </li>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+
+            <section id="paragraph">
+            <section id="table">
+                <div class="row">
+                        <div class="col-lg-10">
+                          <br><br>  
+                          <h1>Unit 12 | Web Visualization Dashboard (Latitude)</h1>
+                           <br><h3>Background</h3>
+                              <p>
+                              Data is more powerful when we share it with others! Let's take what we've learned about HTML and CSS to create a dashboard showing off the analysis we've done.
+                              </p>                            
+                              <h3>Lattitude - Latitude Analysis Dashboard with Attitude</h3>
+                              <p>
+                              For this homework we'll be creating a visualization dashboard website using visualizations we've created in a past assignment. Specifically, we'll be using the data from homework six.
+                              </p>
+                              <p>
+                              In building this dashboard, we'll create individual pages for each plot and a means by which we can navigate between them. These pages will contain the visualizations and their corresponding explanations. We'll also have a landing page, a page where we can see a comparison of all of the plots, and another page where we can view the data used to build them.
+                              </p>
+                              <h3>Website Requirements</h3>
+                              <p>
+                              For reference, see the screenshot in the homework assignment folder (from GitHub) below. The website must consist of 7 pages total, including:
+                                <ul>
+                                  <li> A landing page containing:
+                                    <ul>
+                                      <li>
+                                          An explanation of the project.
+                                      </li>
+                                      <li>
+                                          Links to each visualizations page.
+                                      </li>
+                                    </ul>
+                                  </li>
+                                  <li>
+                                    Four visualization pages, including:
+                                    <ul>
+                                        <li>
+                                            A descriptive title and heading tag.
+                                        </li>
+                                        <li>
+                                            The plot/visualization itself for the selected comparison.
+                                        </li>
+                                        <li>
+                                            A paragraph describing the plot and its significance.
+                                        </li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      A Comparisons" page that:
+                                    <ul>
+                                        <li>
+                                            Contains all of the visualizations on the same page so we can easily visually compare them.
+  * Uses a bootstrap grid for the visualizations.
+                                        </li>
+                                        <li>
+                                            The grid must be two visualizations across on screens medium and larger, and 1 across on extra-small and small screens.
+                                        </li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      A Data page that:
+                                    <ul>
+                                        <li>
+                                            Displays a responsive table containing the data used in the visualizations.
+                                        </li>
+                                        <li>
+                                            The table must be a bootstrap table component.
+                                        </li>
+                                        <li>
+                                            The data must come from exporting the `.csv` file as HTML, or converting it to HTML. You may use a csv-to-html table conversion tool, e.g. 
+                                        </li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      The website must, at the top of every page, have a navigation menu that:
+                                      <ul>
+                                          <li>
+                                              Has the name of the site on the left of the nav which allows users to return to the landing page from any page.
+                                          </li>
+                                          <li>
+                                              Contains a dropdown on the right of the navbar named "Plots" which provides links to each individual visualization page.
+                                          </li>
+                                          <li>
+                                              Provides two more links on the right: "Comparisons" which links to the comparisons page, and "Data" which links to the data page. 
+                                          </li>
+                                          <li>
+                                              Is responsive (using media queries). The nav must have similar behavior as the screenshots (notice the background color change).
+                                          </li>
+                                        </ul>
+                                  </ul>
+                                <br>
+                              
+                                  Finally, the website must be deployed to github pages.
+                                
+                                  When finished, submit to BootcampSpot the links to 1) the deployed app and 2) the github repository.
+                              </p>
+                            <h3>
+                                Considerations
+                            </h3>
+                            <p>
+                                You may use the data from homework six or choose another dataset. Alternatively, you may use the included cities.csv and pull the images from the included notebook. 
+
+                                You must use bootstrap. This includes using the bootstrap `navbar` component for the header on every page, the bootstrap table component for the data page, and the bootstrap grid for responsiveness on the comparison page.
+                            </p><p>
+                                You must deploy your website to github pages, with the website working on a live, publicly accessible URL as a result.
+* Be sure to use a CSS media query for the navigation menu.
+                            </p><p></p>
+                            Be sure your website works at all window widths/sizes. Feel free to take some liberty in the visual aspects, but keep the core functionality the same.
+                            </p>
+                        </div>
+                        
+                    </div>  
+                </div>  
+
+</body>
+</html>

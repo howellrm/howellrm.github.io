@@ -9,7 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
@@ -40,26 +39,16 @@
       //document.body.scrollTop = 0; // For Safari
       //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
-  
 
-  //   $(window).scroll(function(){
-  //     if ($(document).scrollTop() > 50) {
-  //       $('nav').addClass('scrolled');
-  //     }
-  //     else {
-  //       $('nav').removeClass('scrolled');
-  //     }
-  // });  
-
-  $(window).scroll(function(){
-    var navbar = document.getElementsByTagName('nav')
-       if ($(document).scrollTop() > 50) {
-         navbar.classList.add('scrolled');
+$(window).scroll(function(){
+       if ($(document).scrollTop() > 850) {
+        document.getElementById('nav-bar').classList.add('scrolled');
        }
        else {
-         navbar.classList.remove('scrolled');
+        document.getElementById('nav-bar').classList.remove('scrolled');
        }
    });
+
 </script>
 
 
@@ -67,7 +56,10 @@
   <link href="./mapstyle.css" rel="stylesheet">
   <link href="./style.css" rel="stylesheet">
 
-  
+  <!-- For Flask connection -->
+  <!-- <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mapstyle.css') }}">
+   -->
   <!-- Title -->
   <title>Unsolved Crimes</title>
 </head>
@@ -75,12 +67,12 @@
 
 <body>
   <!-- Creates the Navigation Bar with logo, links, dropdown option, and search bar -->
-  <nav class="nav-bar">
+  <nav id="nav-bar" class="nav-bar">
     <ul>
-      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#home">Home</a></li>
       <li><a href="#ProjectDescription">Project Description</a></li>
       <li><a href="#CrimesByState">By State</a></li>
-      <li><a href="#CrimeData">National</a></li>
+      <li><a href="#CrimeData">Charts</a></li>
       <li><a href="#ProjectReq">Project Requirements</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -130,10 +122,23 @@
               will load into any statistical software. You can download the CSV file by clicking 
               <a href="https://www.dropbox.com/s/zs88zakc03zjxtr/UCR65_16.csv.zip?dl=1"  class="link"><b>here</b></a>.
           </p>
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services"></a>
-          <p class="overview-p">Visit the <a href="http://www.murderdata.org/" class="link">Murder Accountability Project</a> for more information.</p>
-      </div>
+          <p class="overview-p">
+            Our team used the above linked CSV data. We cleaned the data with Python in Jupyter Notebook. If you are interested in 
+            seeing our Jupyter Notebook code, click one of the following links. One Notebook will show the teams data cleaning 
+            techniques, and the other will show the code used to generate the static charts in later sections. 
 
+            <!-- NEED TO LINK JN FILES -->
+            <br><br>
+            <a href="./JNCleaning.html"  class="link" target="_blank"><b>JN Data Cleaning Technique</b></a>
+            <br><br>
+            <a href="./JNCharts.html"  class="link" target="_blank"><b>JN Static Chart Creation</b></a>
+          </p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services"></a>
+          <p class="overview-p">
+            Visit the <a href="http://www.murderdata.org/" class="link">Murder Accountability Project</a> for more information.
+            about the dataset or their compilations. 
+          </p>
+      </div>
     </div>
   </section>
 
@@ -152,62 +157,107 @@
               <div id="tooltip"></div><!-- div to hold tooltip. -->
                <svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->    
               <div id="box"></div>
-              
+          <br><br><br>
       </div>
   </section>
 
-  <section id="CrimeData">
-    <div class="container">
-      <div class="CrimeData">
-        <h2 class="h2-title">Crime Data</h2>
-        <br><hr>
-             <div class = "container">
-        <div class="row">                          
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                      <br>
-                            <h2>Latitude vs. </h2>
-                            <hr>
-                            <p>Click on any plot to get an in-depth analysis and summary of findings.</p>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <h3 class = "text-center">Max Temperture</h3>
-                                    <a href="temperature.html"><img class = "img img-responsive" src="Images/lvt-rh.png" style="width:100%" alt=""></a></div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <h3 class = "text-center">Humidity</h3>
-                                    <a href="humidity.html"><img class = "img img-responsive" src="Images/lvh-rh.png" style="width:100" alt=""></a></div>
-                            </div>
-                            <br><br>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <h3 class = "text-center">Cloudiness</h3>
-                                    <a href="cloudiness.html"><img class = "img img-responsive" src="Images/lvc-rh.png" style="width:100" alt=""></a></div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                    <h3 class = "text-center">Wind Speed</h3>
-                                    <a href="windspeed.html"><img class = "img img-responsive" src="Images/lvw-rh.png" style="width:100" alt=""></a></div>
-                            </div>
-                                        
-                    </div>
-                        
-                            </div>
-                        </div>
-                        <div class="col-md-1"></div>
-            </div>
-        </div>
-        
+  <section id="deco2">
+      <div class="deco2">
       </div>
     </div>
   </section>
 
+  <section id="CrimeData">
+      <div class="container">
+        <div class="CrimeData">
+          <br>
+          <h2 class="h2-title">Additional Crime Charts</h2>
+          <br><br>
+            <p>
+              Click on the chart thumbnails below to expand and see additional data. 
+              The charts below reflect national data as well as data specific to North Carolina. 
+            </p>
+          <br><br>
 
+    <!-- Images used to open the lightbox -->
+    <div class="row">
+        <div class="column">
+            <img src="./images/mweapons.png" onclick="openModal();currentSlide(1)" class="hover-shadow" style="width:70%">
+            <!-- <img src="../static/images/mweapons.png" onclick="openModal();currentSlide(1)" class="hover-shadow" style="width:70%"> -->
+        </div>
+        <div class="column">
+            <img src="./images/NCmurder.png" onclick="openModal();currentSlide(2)" class="hover-shadow" style="width:70%">
+            <!-- <img src="../static/images/NCmurder.pngg" onclick="openModal();currentSlide(1)" class="hover-shadow" style="width:70%"> -->
+        </div>
+        <div class="column">
+            <img src="./images/Sex_Pie.png" onclick="openModal();currentSlide(3)" class="hover-shadow" style="width:80%">
+            <!-- <img src="../static/images/Sex_Pie.pn" onclick="openModal();currentSlide(1)" class="hover-shadow" style="width:70%"> -->
 
-  <section>
-  
-  
-  
-  
+        </div>
+        <div class="column">
+            <img src="./images/Race_Pie.png" onclick="openModal();currentSlide(4)" class="hover-shadow" style="width:100%">
+            <!-- <img src="../static/images/Race_Pie.png" onclick="openModal();currentSlide(1)" class="hover-shadow" style="width:70%"> -->
+        </div>
+        </div>
+    
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+    
+            <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="./images/mweapons.png" style="width:50%">
+            <!-- <img src="../static/images/mweapons.png" style="width:50%"> -->
+            </div>
+    
+            <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="./images/NCmurder.png" style="width:50%">
+            <!-- <img src="../static/images/NCmurder.png" style="width:50%"> -->
+            </div>
+    
+            <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="./images/Sex_Pie.png" style="width:50%">
+            <!-- <img src="../static/images/Sex_Pie.png" style="width:50%"> -->
+            </div>
+    
+            <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="./images/Race_Pie.png" style="width:75%">
+            <!-- <img src="../static/images/Race_Pie.png" style="width:50%"> -->
+            </div>
+    
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+            <!-- Caption text -->
+            <div class="caption-container">
+            <p id="caption"></p>
+            </div>
+    
+            <!-- Thumbnail image controls -->
+            <!-- <div class="column">
+            <img class="demo" src="./images/mweapons.png" onclick="currentSlide(1)" alt="Nature">
+            </div>
+    
+            <div class="column">
+            <img class="demo" src="./images/NCmurder.png" onclick="currentSlide(2)" alt="Snow">
+            </div>
+    
+            <div class="column">
+            <img class="demo" src="./images/Sex_Pie.png" onclick="currentSlide(3)" alt="Mountains">
+            </div>
+    
+            <div class="column">
+            <img class="demo" src="./images/Race_Pie.png" onclick="currentSlide(4)" alt="Lights">
+            </div> -->
+        </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- <section id="contact">
@@ -272,22 +322,28 @@
         </div>
         <div class="col-md-2">
           <img src="./images/Screen Shot 2018-06-21 at 8.55.36 AM.png" class="headshots" alt-text="Kettyl Amoakon"></a>
+          <!-- <img src="../static/images/Screen Shot 2018-06-21 at 8.55.36 AM.png" class="headshots" alt-text="Kettyl Amoakon"></a> -->
+
           <p>Kettyl Amoakon</p>
         </div>
         <div class="col-md-2">
           <img src="./images/Screen Shot 2018-06-21 at 8.55.25 AM.png" class="headshots" alt-text="Benjamin Fisher"></a>
+          <!-- <img src="../static/images/Screen Shot 2018-06-21 at 8.55.25 AM.png" class="headshots" alt-text="Benjamin Fisher"></a> -->
           <p>Benjamin Fisher</p>
         </div>
         <div class="col-md-2">
           <img src="./images/IMG_5084-1.jpg" class="headshots" alt-text="Randi Howell"></a>
+          <!-- <img src="../static/images/IMG_5084-1.jpg" class="headshots" alt-text="Randi Howell"></a> -->
           <p>Randi Howell</p>
         </div>
         <div class="col-md-2">
           <img src="./images/Screen Shot 2018-06-21 at 8.55.11 AM.png" class="headshots" alt-text="Zach King"></a>
+          <!-- <img src="../static/images/Screen Shot 2018-06-21 at 8.55.11 AM.png" class="headshots" alt-text="Zach King"></a> -->
           <p>Zach King</p>
         </div>
         <div class="col-md-2" id="headshots">
           <img src="./images/Screen Shot 2018-06-21 at 8.55.01 AM.png" class="headshots" alt-text="Deanna Ryder"></a>
+          <!-- <img src="../static/images/Screen Shot 2018-06-21 at 8.55.01 AM.png" class="headshots" alt-text="Deanna Ryder"></a> -->
           <p>Deanna Ryder</p>
         </div>
 
@@ -295,12 +351,16 @@
         <div class="contact">
             <br>
             <h2 class="h4-title">Connect With Us</h4>  
-            <!-- <span class="glyphicon glyphicon-envelope"> -->
             <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square" id="icons"></i></a>
             <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter" id="icons"></i></a>
             <a href="https://www.linkedin.com"  target="_blank"><i class="fab fa-linkedin-in" id="icons"></i></a>
             <a href="mailto:rhowel14@uncc.edu@uncc.edu" target="_blank"><i class="fas fa-envelope" id="icons"></i></a>
+            <a href="https://github.com/BennyFish/Unsolved_Murders" target="_blank"><i class="fab fa-github" id="icons"></i></a>
           </div>
+          <p style="font-size: 14px">
+            <a href="./JNCleaning.html"  class="link"><b>JN Data Cleaning Technique</b></a> | <a href="./JNCharts.html"  class="link"><b>JN Static Chart Creation</b></a>
+        </p>
+            <!-- <p><a href="" target="_blank">API</a></p> -->
           <br><br>
     </section>
 
@@ -311,6 +371,54 @@
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="./uStates.js"></script>
   <script src="./map.js"></script>
+
+  <!-- Javascript for Flask Connection -->
+  <!-- <script src="../static/uStates.js"></script>
+  <script src="../static/map.js"></script> -->
+
+  <script>
+      // Open the Modal
+      function openModal() {
+        document.getElementById('myModal').style.display = "block";
+      }
+      
+      // Close the Modal
+      function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+      }
+      
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+      </script>
+
 
 </body>
 </html>

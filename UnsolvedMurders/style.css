@@ -58,6 +58,23 @@ html, body {
   height: 350px;
 }
 
+#deco2 { 
+    height: 100%;
+    width:100%;
+    opacity: 0.25;
+    margin: auto;
+    background: url(https://images.pexels.com/photos/333850/pexels-photo-333850.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat 30% 40%;
+    top: 1px solid;
+    height: 350px;
+    border-top: #212529 solid 2px;
+    border-bottom: #212529 solid 2px;
+    /* background-position-y: 90%; */
+    /*-webkit-filter: grayscale(50%);  Safari 6.0 - 9.0 
+    filter: grayscale(100%);*/
+  }
+
+
+
 #CrimeData {
     height: 100%;
     width:100%;
@@ -222,8 +239,16 @@ html, body {
     width: 120px;
 }
 
+.imgchart {
+    height: 400px;
+    width: 500px;
+}
 
-
+.imgpie {
+    height: 500px;
+    width: 600px;
+}
+/* style="width:100%" */
 
 /* To the top button */
 #scroll-btn {
@@ -254,9 +279,9 @@ html, body {
 .nav-bar {
     width: 100%;
     height: 50px;
-    background: rgba(255,255,255,.1);
-    border-top: 1px solid rgba(255,255,255,.2);
-    border-bottom: 1px solid rgba(255,255,255,.2);
+    background:transparent;
+    /* border-top: 1px solid rgba(255,255,255,.2);
+    border-bottom: 1px solid rgba(255,255,255,.2); */
     position:fixed;
     top: 0;
 }
@@ -293,9 +318,181 @@ nav ul li a.active {
     background-color:#E00000;
 }
 
-.nav.scrolled{
-    background-color: #2d2f33;
+.scrolled {
+    width: 100%;
+    height: 50px;
+    background-color: #1B1923;
     transition: background-color 200ms linear;
+    top: 0;
+    position: fixed;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #C40018;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ------------------ */
+.row > .column {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Create four equal columns that floats next to eachother */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #1B1923;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: center;
+    background-color: #EBEBEB;
+    margin: auto;
+    padding: 0;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #EBEBEB;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #C40018;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: #C40018;
+    color: #EBEBEB;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Caption text */
+  .caption-container {
+    text-align: center;
+    background-color: #1B1923;
+    padding: 2px 16px;
+    color: #EBEBEB;
+  }
+  
+  img.demo {
+    opacity: 0.6;
+    size: 50px 50px;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+    size: 50px 50px;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+    size: 50px 50px;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    size: 50px 50px;
+}
+
+/* ------------------ */
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
 }
 
 @media (min-width:992px){
@@ -349,3 +546,5 @@ nav ul li a.active {
         line-height: 160%;
     }
 }
+
+

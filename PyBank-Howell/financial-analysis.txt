@@ -1,0 +1,18 @@
+Financial Analysis for Data Set 1
+ ---------------------------- 
+
+ Total Months: 41
+ Total Revenue: 18971412
+ Average Revenue Change: 462717.3658536585
+ Greatest Increase in Revenue: Sep-15 1195111
+ Greatest Decrease in Revenue: Sep-15 -1172384
+ 
+ 
+Financial Analysis for Data Set 2
+ ---------------------------- 
+
+ Total Months: 86
+ Total Revenue: 36973911
+ Average Revenue Change: 429929.1976744186
+ Greatest Increase in Revenue: Mar-2012 1141606
+ Greatest Decrease in Revenue: Mar-2012 -1063151
